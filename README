@@ -1,6 +1,20 @@
-1. Type "make" to build.  (Type "make clean" first if you already compiled and want to recompile from scratch.)
+1. Introduction
 
-2. Run trace reader:
+In this project, I constructed a simulator for an out-of-order superscalar processor that fetches and issues N instructions per cycle.
+The out-of-order processor included "Fetch", "Decode", "Rename", "RegRead", "Dispatch", Issue", "Execute", "Retire" stages.
+Also included the Rename Map table(RMT), Issue Queue, Reorder Buffer(ROB) and Architectural Register File(ARF).
+
+
+2. Files Introduction
+scheduler.cc -> is the processor's class
+sim_proc.cc  -> the file to read the input file and execute the main program
+sim_proc.h   -> header file for sim_proc.cc, used to typedef some usful data structure
+
+
+3. Command for control input pattern
+3-1. Type "make" to build.  (Type "make clean" first if you already compiled and want to recompile from scratch.)
+
+3-2. Run trace reader:
 
    To run without throttling output:
    ./sim 256 32 4 gcc_trace.txt
